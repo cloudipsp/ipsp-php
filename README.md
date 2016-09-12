@@ -4,6 +4,10 @@
 A payment service provider (PSP) offers shops online services for accepting electronic payments by a variety of payment methods including credit card, bank-based payments such as direct debit, bank transfer, and real-time bank transfer based on online banking. Typically, they use a software as a service model and form a single payment gateway for their clients (merchants) to multiple payment methods. 
 [read more](https://en.wikipedia.org/wiki/Payment_service_provider)
 
+## Installation
+```cmd
+git clone git@github.com:kosatyi/ipsp-php.git
+```
 ## Quick Start
 
 ```php
@@ -22,6 +26,7 @@ $ipsp   = new Ipsp_Api( $client );
 <?php
 function getSignature( $merchant_id , $password , $params = array() ){
  $params['merchant_id'] = $merchant_id;
+ $params = array_filter($params);
  ksort($params);
  $params = array_values($params);
  array_unshift( $params , $password );
