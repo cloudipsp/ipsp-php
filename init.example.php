@@ -1,5 +1,5 @@
 <?php
-require_once 'ipsp-php/autoload.php';
+require_once 'autoload.php';
 define('MERCHANT_ID' , 1000);
 define('MERCHANT_PASSWORD' , 'test');
 define('IPSP_GATEWAY' ,  'api.fondy.eu');
