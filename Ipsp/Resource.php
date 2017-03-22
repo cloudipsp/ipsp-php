@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Class Ipsp_Resource
  */
