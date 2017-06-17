@@ -1,0 +1,15 @@
+{
+    "name": "cloudipsp/ipsp",
+    "description": "Payment service provider",
+    "type": "library",
+    "require": {
+        "php":">=5.4",
+        "ext-simplexml":"*",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ipsp\\": "src/"
+        }
+    }
+}

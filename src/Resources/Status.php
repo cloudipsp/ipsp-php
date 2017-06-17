@@ -1,27 +1,22 @@
 <?php
 
+namespace Ipsp\Resources;
+
+use Ipsp\Resource;
+
 /**
- * Class Ipsp_Resource_Refund
+ * Class PaymentStatus
  */
-class Ipsp_Resource_Reverse extends Ipsp_Resource{
-
-    protected $path   = '/reverse/order_id';
-
+class Status extends Resource
+{
+    protected $path   = '/status/order_id';
     protected $fields = array(
-        'merchant_id'=>array(
-            'type'    => 'string',
-            'required'=>TRUE
-        ),
         'order_id'=>array(
             'type'    => 'string',
             'required'=>TRUE
         ),
-        'currency' => array(
+        'merchant_id'=>array(
             'type' => 'string',
-            'required'=>TRUE
-        ),
-        'amount' => array(
-            'type' => 'integer',
             'required'=>TRUE
         ),
         'signature' => array(
@@ -33,5 +28,4 @@ class Ipsp_Resource_Reverse extends Ipsp_Resource{
             'required'=>FALSE
         )
     );
-
 }

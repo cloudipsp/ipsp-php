@@ -1,9 +1,14 @@
 <?php
 
+namespace Ipsp\Resource;
+
+use Ipsp\Resource;
+
 /**
- * Class Ipsp_Resource_PaymentStatus
+ * Class PaymentStatus
  */
-class Ipsp_Resource_Status extends Ipsp_Resource{
+class Status extends Resource
+{
     protected $path   = '/status/order_id';
     protected $fields = array(
         'order_id'=>array(

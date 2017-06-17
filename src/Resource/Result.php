@@ -1,9 +1,14 @@
 <?php
 
+namespace Ipsp\Resource;
+
+use Ipsp\Resource;
+
 /**
- * Class Ipsp_Resource_PaymentResult
+ * Class PaymentResult
  */
-class Ipsp_Resource_Result extends Ipsp_Resource{
+class Result extends Resource
+{
     public function call( $data = NULL ){
         if( empty( $data ) )
         {

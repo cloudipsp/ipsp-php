@@ -1,9 +1,11 @@
 <?php
 
+namespace Ipsp;
+
 /**
- * Class Ipsp_Api
+ * Class Api
  */
-class Ipsp_Api {
+class Api {
 
     private $client;
     private $params = array();
@@ -16,9 +18,9 @@ class Ipsp_Api {
     const RUB = 'RUB';
     const GBP = 'GBP';    
     /**
-     * @param Ipsp_Client $client
+     * @param Client $client
      */
-    public function __construct( Ipsp_Client $client ){
+    public function __construct( Client $client ){
         $this->client   = $client;
         set_error_handler(array($this, 'handleError'));
         set_exception_handler(array($this, 'handleException'));
@@ -28,10 +30,10 @@ class Ipsp_Api {
      * @return bool
      */
     public function initResource($name){
-        $class    = implode('_',array('Ipsp','Resource',ucfirst($name)));
-        if(!class_exists($class)) new \Exception(sprintf('ipsp resource "%s" not found',$class));
-        $resource = new $class;
-        return $resource;
+        $class    = '\Ipsp\Resourses\\' . ucfirst($name);
+        if(!class_exists($class))
+            new \Exception(sprintf('"%s" not found',$class));
+        return new $class;
     }
     /**
      * @param null $name
