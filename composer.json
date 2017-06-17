@@ -8,6 +8,9 @@
         "ext-curl": "*"
     },
     "autoload": {
-        "psr-4": {"Ipsp\\": "src/"}
+        "psr-4": {
+            "Ipsp\\": "src/",
+            "Ipsp\\Resource\\": "src/Resource/"
+        }
     }
 }
