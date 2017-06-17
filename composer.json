@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Ipsp\\": "src/",
+            "Ipsp\\": "src/"
         }
     }
 }
