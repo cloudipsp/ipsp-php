@@ -1,6 +1,8 @@
 <?php
 
-class Ipsp_XmlData extends \SimpleXMLElement{
+namespace Ipsp;
+
+class XmlData extends \SimpleXMLElement{
     /**
      * @param array $array
      */

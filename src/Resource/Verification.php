@@ -1,9 +1,14 @@
 <?php
 
+namespace Ipsp\Resource;
+
+use Ipsp\Resource;
+
 /**
- * Class Ipsp_Resource_Refund
+ * Class Refund
  */
-class Ipsp_Resource_Verification extends Ipsp_Resource{
+class Verification extends Resource
+{
     protected $path   = '/checkout/url';
     protected $defaultParams = array(
         'verification'=>'y',

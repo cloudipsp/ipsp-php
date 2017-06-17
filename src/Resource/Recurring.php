@@ -1,10 +1,17 @@
 <?php
 
+namespace Ipsp\Resource;
+
+use Ipsp\Resource;
+
 /**
- * Class Ipsp_Resource_PaymentResult
+ * Class Refund
  */
-class Ipsp_Resource_Capture extends Ipsp_Resource{
-    protected $path   = '/capture/order_id';
+class Recurring extends Resource{
+    protected $path   = '/recurring';
+    protected $defaultParams = array(
+
+    );
     protected $fields = array(
         'merchant_id'=>array(
             'type'    => 'string',
@@ -25,6 +32,15 @@ class Ipsp_Resource_Capture extends Ipsp_Resource{
         'signature' => array(
             'type' => 'string',
             'required'=>TRUE
+        ),
+        'rectoken' => array(
+            'type' => 'string',
+            'required'=>TRUE
+        ),
+        'version' => array(
+            'type' => 'string',
+            'required'=>FALSE
         )
     );
+
 }

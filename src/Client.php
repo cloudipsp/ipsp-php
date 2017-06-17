@@ -1,9 +1,11 @@
 <?php
 
+namespace Ipsp;
+
 /**
  * Class PaymentClient
  */
-class Ipsp_Client {
+class Client {
     private $id;
     private $password;
     private $url;

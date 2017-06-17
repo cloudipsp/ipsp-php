@@ -1,13 +1,15 @@
 <?php
 
-/**
- * Class Ipsp_Resource_Refund
- */
-class Ipsp_Resource_Recurring extends Ipsp_Resource{
-    protected $path   = '/recurring';
-    protected $defaultParams = array(
+namespace Ipsp\Resource;
 
-    );
+use Ipsp\Resource;
+
+/**
+ * Class PaymentUrl
+ */
+class Checkout extends Resource
+{
+    protected $path   = '/checkout/url';
     protected $fields = array(
         'merchant_id'=>array(
             'type'    => 'string',
@@ -15,6 +17,10 @@ class Ipsp_Resource_Recurring extends Ipsp_Resource{
         ),
         'order_id'=>array(
             'type'    => 'string',
+            'required'=>TRUE
+        ),
+        'order_desc'=>array(
+            'type' => 'string',
             'required'=>TRUE
         ),
         'currency' => array(
@@ -28,15 +34,9 @@ class Ipsp_Resource_Recurring extends Ipsp_Resource{
         'signature' => array(
             'type' => 'string',
             'required'=>TRUE
-        ),
-        'rectoken' => array(
-            'type' => 'string',
-            'required'=>TRUE
-        ),
-        'version' => array(
-            'type' => 'string',
-            'required'=>FALSE
         )
     );
-
+    public function redirectToCheckout(){
+        $this->getResponse()->redirectTo('checkout_url');
+    }
 }

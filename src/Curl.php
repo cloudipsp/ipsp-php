@@ -1,9 +1,11 @@
 <?php
 
+namespace Ipsp;
+
 /**
- * Class Ipsp_Curl
+ * Class Curl
  */
-class Ipsp_Curl {
+class Curl {
     protected $response = '';       // Contains the cURL response for debug
     protected $session;             // Contains the cURL handler for a session
     protected $url;                 // URL of the session
