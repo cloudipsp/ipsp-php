@@ -1,9 +1,11 @@
 <?php
 
+namespace Ipsp;
+
 /**
- * Class Ipsp_Response
+ * Class Response
  */
-class Ipsp_Response {
+class Response {
     private $data = array();
     public function __construct($data=array()){
         $this->data = $data;

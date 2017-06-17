@@ -1,9 +1,13 @@
 <?php
 
+namespace Ipsp\Resource;
+
+use Ipsp\Resource;
+
 /**
- * Class Ipsp_Resource_Refund
+ * Class Refund
  */
-class Ipsp_Resource_P2pcredit extends Ipsp_Resource{
+class P2pcredit extends Resource {
     protected $path   = '/p2pcredit';
     protected $defaultParams = array(
 

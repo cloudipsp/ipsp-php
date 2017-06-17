@@ -1,9 +1,14 @@
 <?php
 
+namespace Ipsp\Resources;
+
+use Ipsp\Resource;
+
 /**
- * Class Ipsp_Resource_PaymentResult
+ * Class PaymentResult
  */
-class Ipsp_Resource_Capture extends Ipsp_Resource{
+class Capture extends Resource
+{
     protected $path   = '/capture/order_id';
     protected $fields = array(
         'merchant_id'=>array(

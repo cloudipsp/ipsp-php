@@ -1,9 +1,13 @@
 <?php
 
+namespace Ipsp\Resources;
+
+use Ipsp\Resource;
+
 /**
- * Class Ipsp_Resource_Refund
+ * Class Refund
  */
-class Ipsp_Resource_Reports extends Ipsp_Resource{
+class Reports extends Resource{
     protected $path   = '/reports';
     protected $fields = array(
         'merchant_id'=>array(
