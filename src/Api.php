@@ -30,7 +30,7 @@ class Api {
      * @return bool
      */
     public function initResource($name){
-        $class    = '\Ipsp\Resourse\\' . ucfirst($name);
+        $class    = '\Ipsp\Resourses\\' . ucfirst($name);
         if(!class_exists($class))
             new \Exception(sprintf('"%s" not found',$class));
         return new $class;
