@@ -44,8 +44,8 @@ class Ipsp_Response {
 	public function redirectToCheckout(){
         $this->redirectTo('checkout_url');
     }
-	public function isCaptured()
-    {
+	public function isCaptured(){
+		if(!array_key_exists('capture_status', $this->data)) throw new \Exception('invalid response');
         return $this->data['capture_status'] != 'captured' ? false : true;
     }
 }
