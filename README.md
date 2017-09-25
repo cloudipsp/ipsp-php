@@ -6,7 +6,7 @@ A payment service provider (PSP) offers shops online services for accepting elec
 
 ## Installation
 ```cmd
-git clone git@github.com:kosatyi/ipsp-php.git
+git@github.com:cloudipsp/ipsp-php.git
 ```
 ## Quick Start
 
